@@ -2,7 +2,7 @@ import axios, { AxiosInstance } from 'axios';
 import crypto from 'crypto';
 
 interface OrvioClientOptions {
-  /** Custom base URL for the API (default: 'https://orvio.1110777.xyz') */
+  /** Custom base URL for the API (default: 'https://backend-orvio.1110777.xyz') */
   baseURL?: string;
 }
 
@@ -168,7 +168,7 @@ export class OrvioClient {
    * ```
    */
   constructor(apiKey: string, options: OrvioClientOptions = {}) {
-    this.baseURL = options.baseURL || 'https://orvio.1110777.xyz';
+    this.baseURL = options.baseURL || 'https://backend-orvio.1110777.xyz';
     this.apiKey = apiKey;
     this.accessToken = null;
     this.api = this.initializeApi();
